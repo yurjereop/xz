@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Линейная структура</title>
+    <link rel="stylesheet" href="./style.css" type="text/css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <h1 class="head">Алгоритмические структуры и алгоритмы</h1>
+      <nav>
+        <ul>
+          <li><a href="./index.html" class="a">Главная</a></li>
+          <li><a href="./test.html" class="a">Задания</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h2 class="mini">Цикл</h2>
+      <p class="opis">
+        Циклическая структура позволяет выполнять определённую
+        последовательность действий многократно. Если условие цикла верно, то
+        выполняется последовательность действий. Последовательность действий,
+        которые выполняются многократно, называется
+        <strong>телом цикла</strong>. В программе цикл выполняется с помощью
+        <strong>операторов цикла</strong>. Есть три вида циклических структур:
+      </p>
+      <h3 class="forma">Цикл с заданным условием продолжения работы</h3>
+      <p class="opis">
+        Такой цикл проверяет условие <em>перед</em> телом цикла. Он может не
+        выполниться ни одного раза. Используется оператор
+        <span class="construct usloper">while do</span>
+      </p>
+      <pre>
+  <span class="usloper">оператор цикла с условием</span>
+    <span class="oper">действие</span> 1;
+    <span class="oper">действие</span> 2;
+    <span class="oper">действие</span> n;
+    <h2 class="forma">Пример</h2>
+  while a > b do
+    b := b + 1;
+      </pre>
+      <h3 class="szagl">Блок-схема</h3>
+      <img src="./while.jpg" alt="" class="sxema sxema2" />
+      <h3 class="forma">Цикл с заданным условием окончания работы</h3>
+      <p class="opis">
+        Такой цикл проверяет условие <em>после</em> тела цикла. Он выполняется
+        хотя бы один раз. Используется оператор
+        <span class="construct usloper">repeat until</span>
+      </p>
+      <pre>
+    <span class="oper">действие</span> 1;
+    <span class="oper">действие</span> 2;
+    <span class="oper">действие</span> n;
+  <span class="usloper">оператор цикла с условием</span>
+  <h2 class="forma">Пример</h2>
+  repeat
+    b := b + 1;
+  until a > b;
+      </pre>
+      <h3 class="szagl">Блок-схема</h3>
+      <img src="./do.jpg" alt="" class="sxema sxema2" />
+      <h3 class="forma">Цикл с параметром</h3>
+      <p class="opis">
+        Такой цикл выполняется <em>заданное</em> количество раз. Используется
+        <span class="construct usloper">for to do</span>
+      </p>
+      <pre>
+  <span class="usloper">оператор цикла с заданным 
+  кол-вом повторений </span>
+    <span class="oper">действие</span> 1;
+    <span class="oper">действие</span> 2;
+    <span class="oper">действие</span> n;
+    <h2 class="forma">Пример</h2>
+  for i := 1 to 10 do
+    b := b + 1;
+      </pre>
+      <h3 class="szagl">Блок-схема</h3>
+      <img src="./for.jpg" alt="" class="sxema sxema2" />
+    </main>
+    <footer class="footer">
+      <p class="foot">
+        На этом сайте вы можете по-больше узнать об основных алгоритических
+        структурах и базовых алгоритмах в языке Pascal. Также здесь есть
+        задания, с помощью которых вы можете проверить себя.
+      </p>
+    </footer>
+  </body>
+</html>

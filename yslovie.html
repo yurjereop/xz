@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Разветвленная структура</title>
+    <link rel="stylesheet" href="./style.css" type="text/css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <h1 class="head">Алгоритмические структуры и алгоритмы</h1>
+      <nav>
+        <ul>
+          <li><a href="./index.html" class="a">Главная</a></li>
+          <li><a href="./test.html" class="a">Задания</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h2 class="mini">Разветвленная структура (условие)</h2>
+      <p class="opis">
+        Ветвление обеспечивает выбор <strong>одного</strong> из путей выполнения
+        алгоритма в зависимости от результата проверки условия. Разветвленная
+        cтруктура может быть представлена тремя различными вариантами:
+      </p>
+      <h3 class="forma">Неполная форма</h3>
+      <p class="opis">
+        Если условие верно, то выполняй дествия, иначе выход из условного
+        оператора. Используется конструкция
+        <span class="construct usloper">if then</span>
+      </p>
+      <pre>
+  <span class="usloper">условный оператор</span>
+  <span class="oper"> действия</span>
+        <h2 class="forma">Пример</h2>
+  if a > b then
+    a := a + b;
+      </pre>
+      <h4 class="szagl">Блок-схема</h4>
+      <img src="./неполная.jpg" alt="" class="sxema" />
+      <h3 class="forma">Полная форма</h3>
+      <p class="opis">
+        Если условие верно, то выполняй первый блок дествий, иначе выполняй
+        второй блок действи. Здесь такая же конструкция, как и в неполной форме,
+        только для выполнения второго блока действий используется оператор
+        <span class="construct usloper">else</span>
+      </p>
+      <pre>
+  <span class="usloper">условный оператор</span>
+  <span class="oper"> действия 1</span>
+  <span class="usloper">иначе</span>
+  <span class="oper"> действия 2</span>
+  <h2 class="forma">Пример</h2>
+  If a > b then
+    a := a + b;
+  else
+    b := b - a;
+      </pre>
+      <h4 class="szagl">Блок-схема</h4>
+      <img src="./полный.jpg" alt="" class="sxema sxema1" />
+      <h3 class="forma">Множественный выбор</h3>
+      <p class="opis">
+        При опреации множественного выбора проверка условия может иметь
+        <strong>более двух</strong> различных вариантов развития работы
+        программы. Если выражение (результат) будет удовлетворять условию, то
+        выполняются действия этого условия. Потом результат выражения
+        сравнивается со следующим условием. Сравнение будет происходить, пока
+        еще есть условия. В конце может присутствовать общее действие (блок
+        действий по-умолчанию), которое будет выполнятся, если ни одно условие
+        не выполнилось. Для этого используется
+        <span class="construct usloper">case of</span>
+      </p>
+      <pre>
+  <span class="virazh">оператор множественного выбора</span>
+    <span class="usloper">условие 1</span>
+      <span class="oper">действия 1</span>
+    <span class="usloper">условие 2</span>
+      <span class="oper">действия 2</span>
+    <span class="usloper">условие n</span>
+      <span class="oper">действия n</span>
+      <h2 class="forma">Пример</h2>
+  case var of 
+  0 : writeln('0');
+  1 : writeln('1');
+  2 : writeln('2');
+  3 : writeln('3');
+  else
+  writeln("var > 3 или var < 0");
+      </pre>
+      >
+      <h4 class="szagl">Блок-схема</h4>
+      <img src="./switch.jpg" alt="" class=" sxema sxema2" />
+    </main>
+    <footer class="footer">
+      <p class="foot">
+        На этом сайте вы можете по-больше узнать об основных алгоритических
+        структурах и базовых алгоритмах в языке Pascal. Также здесь есть
+        задания, с помощью которых вы можете проверить себя.
+      </p>
+    </footer>
+  </body>
+</html>

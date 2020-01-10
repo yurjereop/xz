@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Алгоритмы и структуры</title>
+    <link rel="stylesheet" href="./style.css" type="text/css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <h1 class="head">Алгоритмические структуры и алгоритмы</h1>
+      <nav>
+        <ul>
+          <li><a href="./index.html" class="a">Главная</a></li>
+          <li><a href="./test.html" class="a">Задания</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main id="main">
+      <h1 class="mini">Тест</h1>
+      <h3 class="forma">
+        1.Какой оператор используется для выполнения второго блока действий в
+        условном операторе?
+      </h3>
+      <div class="gr">
+        <p><input type="radio" name="perv" />another</p>
+        <p><input type="radio" name="perv" class="r" />else</p>
+        <p><input type="radio" name="perv" />different</p>
+        <p><input type="radio" name="perv" />otherwise</p>
+      </div>
+      <h3 class="forma">
+        2.Сколько раз обязательно выполнится цикл с пост-условием(repeat until)?
+      </h3>
+      <div class="gr">
+        <p><input type="radio" name="vtor" class="r" />1</p>
+        <p><input type="radio" name="vtor" />0</p>
+        <p><input type="radio" name="vtor" />2</p>
+        <p><input type="radio" name="vtor" />3</p>
+      </div>
+      <h3 class="forma">
+        3.Если в условном операторе присутвствует оператор else, то какая это
+        форма условного оператора?
+      </h3>
+      <div class="gr">
+        <p><input type="radio" name="third" class="r" />Полная</p>
+        <p><input type="radio" name="third" />Большая</p>
+        <p><input type="radio" name="third" />Простая</p>
+        <p><input type="radio" name="third" />Неполная</p>
+      </div>
+      <h3 class="forma">
+        4.Какие операторы используются для цикла с заданным количеством
+        повторений?
+      </h3>
+      <div class="gr">
+        <p><input type="radio" name="forth" />if then else</p>
+        <p><input type="radio" name="forth" />while do</p>
+        <p><input type="radio" name="forth" />for of do</p>
+        <p><input type="radio" name="forth" class="r" />for to do</p>
+      </div>
+      <button class="btn">Закончить</button>
+    </main>
+    <footer class="footer" id="f">
+      <p class="foot">
+        На этом сайте вы можете по-больше узнать об основных алгоритических
+        структурах и базовых алгоритмах в языке Pascal. Также здесь есть
+        задания, с помощью которых вы можете проверить себя.
+      </p>
+    </footer>
+    <script>
+      "use strict";
+      let res = 0;
+      let btn = document.querySelector(".btn");
+      let el = document.createElement("p");
+      let f = document.getElementById("f");
+      let ans = document.getElementsByTagName("input");
+      function count() {
+        btn.remove();
+        for (let a of ans)
+          if (a.checked && a.classList.contains("r")) {
+            ++res;
+            a.parentElement.classList.add("green");
+            a.parentElement.classList.add("answer");
+          } else if (a.checked) {
+            a.parentElement.classList.add("red");
+            a.parentElement.classList.add("answer");
+          }
+        el.innerHTML = "Правильных ответов: " + res;
+        el.classList.add("result");
+        document.body.appendChild(el);
+        document.body.insertBefore(el, f);
+      }
+      btn.addEventListener("click", count);
+    </script>
+  </body>
+</html>
