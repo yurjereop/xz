@@ -25,20 +25,13 @@ li {
 }
 .sxema {
   position: relative;
-  transform: translate(19vw, 0);
   margin-bottom: 40px;
 }
 .virazh {
   color: rgb(5, 101, 139);
 }
-.sxema1 {
-  transform: translate(15vw, 0);
-}
-.sxema2 {
-  transform: translate(7vw, 0);
-}
 .forma {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   margin: 0 0px 0 15px;
 }
 .szagl {
@@ -50,8 +43,9 @@ li {
 }
 .chert {
   text-decoration: none;
+  border: solid 1px black;
   color: black;
-  font-size: 1.3rem;
+  font-size: 1rem;
   padding: 5px 8px 5px 5px;
   margin-left: 10px;
 }
@@ -98,13 +92,13 @@ nav {
   text-align: center;
   font-family: sans-serif;
   letter-spacing: 0.2rem;
-  font-size: 150%;
+  font-size: 1.4rem;
   color: white;
 }
 .mini {
   margin-left: 15px;
   margin-right: 10px;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
 }
 .red {
   background: rgb(219, 100, 100);
@@ -133,7 +127,7 @@ nav {
   margin-left: 3vw;
 }
 main {
-  min-height: 75vh;
+  min-height: 65vh;
 }
 .footer {
   background-color: rgb(49, 49, 49);
@@ -149,91 +143,25 @@ main {
   font-family: sans-serif;
   line-height: 1.3rem;
 }
-@media (min-width: 1366px) {
-  html,
-  body {
-    margin: 0;
-    font-family: Montserrat;
-  }
-  .main-header {
-    background: rgb(49, 49, 49);
-    padding: 20px 10px;
-  }
-  li {
-    list-style-type: none;
-    display: inline-block;
-  }
-  ul {
-    padding: 0;
-    text-align: center;
-  }
-  nav {
-    margin-top: 30px;
-  }
-  .head {
-    margin: 10px;
-    text-align: center;
-    font-size: 1.8rem;
-    color: white;
+@media (min-width: 600px) {
+  main {
+    min-height: 72vh;
   }
   .a {
-    text-decoration: none;
-    color: white;
-    margin: 0 5px 10px 5px;
-    font-size: 0.8rem;
-    border: 1px solid white;
-    padding: 10px;
-    border-radius: 5px;
+    font-size: 1.1rem;
   }
-  .footer {
-    background-color: rgb(49, 49, 49);
-    color: white;
-    font-size: 1rem;
-    padding: 20px;
-    box-sizing: border-box;
+  .chert {
+    font-size: 1.3rem;
+  }
+  .head {
+    font-size: 1.7rem;
+  }
+  .mini {
+    font-size: 1.5rem;
   }
 }
-@media (min-width: 1600px) {
-  html,
-  body {
-    margin: 0;
-    font-family: Montserrat;
-  }
-  .main-header {
-    background: rgb(49, 49, 49);
-    padding: 20px 10px;
-  }
-  li {
-    list-style-type: none;
-    display: inline-block;
-  }
-  ul {
-    padding: 0;
-    text-align: center;
-  }
-  nav {
-    margin-top: 30px;
-  }
-  .head {
-    margin: 10px;
-    text-align: center;
-    font-size: 1.8rem;
-    color: white;
-  }
-  .a {
-    text-decoration: none;
-    color: white;
-    margin: 0 5px 10px 5px;
-    font-size: 0.8rem;
-    border: 1px solid white;
-    padding: 10px;
-    border-radius: 5px;
-  }
-  .footer {
-    background-color: rgb(49, 49, 49);
-    color: white;
-    font-size: 1rem;
-    padding: 20px;
-    box-sizing: border-box;
+@media (min-width: 1366px) {
+  main {
+    min-height: 80vh;
   }
 }
