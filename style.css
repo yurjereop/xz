@@ -26,6 +26,7 @@ li {
 .sxema {
   position: relative;
   margin-bottom: 40px;
+  transform: translateX(3vw);
 }
 .virazh {
   color: rgb(5, 101, 139);
@@ -150,6 +151,9 @@ main {
   .a {
     font-size: 1.1rem;
   }
+  .forma {
+    font-size: 1.4rem;
+  }
   .chert {
     font-size: 1.3rem;
   }
@@ -160,8 +164,48 @@ main {
     font-size: 1.5rem;
   }
 }
-@media (min-width: 1366px) {
+@media (min-width: 1200px) {
   main {
     min-height: 80vh;
+  }
+  .opis {
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+  }
+  .a {
+    font-size: 1.4rem;
+  }
+  .chert {
+    font-size: 1.6rem;
+    border: 2px solid black;
+  }
+  .forma {
+    font-size: 1.5rem;
+  }
+  .head {
+    font-size: 2.1rem;
+  }
+  .mini {
+    font-size: 1.9rem;
+  }
+}
+@media (min-width: 1600px) {
+  .opis {
+    font-size: 1.3rem;
+  }
+  .a {
+    font-size: 1.5rem;
+  }
+  .chert {
+    font-size: 1.8rem;
+  }
+  .forma {
+    font-size: 1.6rem;
+  }
+  .head {
+    font-size: 2.4rem;
+  }
+  .mini {
+    font-size: 2rem;
   }
 }
