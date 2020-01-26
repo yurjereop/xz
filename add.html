@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Добавление элемента</title>
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <link rel="stylesheet" href="./style.css" type="text/css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <h1 class="head">Алгоритмические структуры и алгоритмы</h1>
+      <nav>
+        <ul>
+          <li><a href="./index.html" class="a">Главная</a></li>
+          <li><a href="./test.html" class="a">Тест</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1 class="mini">Добавление элемента в массив</h1>
+      <p class="opis">
+        Чтобы добавить элемент в массив на определённую позицию, нужно сдвинуть
+        с этой позиции элементы, находящиеся справа, вправо. Затем необходим
+        вставить новый элемент и увеличить размер массива.
+      </p>
+      <pre class="code">
+program add;
+var
+    arr: array[1..100] of integer;
+    n, element, pos, i: integer; 
+begin
+    writeln('Количество элементов: ');
+    readln(n); 
+    writeln('Укажите значения: ');
+    for i := 1 to n do
+        readln(arr[i]);
+    writeln('Элемент для добавления: ');
+    readln(element);
+    writeln('Позиция добавления: ');
+    readln(pos);
+    for i:= n downto pos do 
+        arr[i+1] := arr[i];
+    arr[pos] := element;
+    n := n + 1;
+    for i:= 1 to n do 
+        write(arr[i], ' ')
+ end.</pre
+      >
+    </main>
+    <footer class="footer">
+      <p class="foot">
+        На этом сайте вы можете по-больше узнать об основных алгоритических
+        структурах и базовых алгоритмах в языке Pascal.
+      </p>
+    </footer>
+  </body>
+</html>

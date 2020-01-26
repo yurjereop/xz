@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Сумма элементов</title>
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <link rel="stylesheet" href="./style.css" type="text/css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <h1 class="head">Алгоритмические структуры и алгоритмы</h1>
+      <nav>
+        <ul>
+          <li><a href="./index.html" class="a">Главная</a></li>
+          <li><a href="./test.html" class="a">Тест</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1 class="mini">Нахождение суммы элементов в массиве</h1>
+      <p class="opis">
+        Этот алгоритм заключается в создании переменной для суммы и в
+        последующем добавлении к ней каждого элемента массива
+      </p>
+      <pre class="code">
+program sum;
+var
+    arr: array[1..100] of integer;
+    n, sum, i: integer; 
+begin
+    writeln('Количество элементов: ');
+    readln(n); 
+    writeln('Укажите значения: ');
+    for i := 1 to n do
+        readln(arr[i]);
+    sum := 0;
+    for i := 1 to n do
+        sum := sum + arr[i];
+     writeln('Сумма: ', sum);
+ end.</pre
+      >
+    </main>
+    <footer class="footer">
+      <p class="foot">
+        На этом сайте вы можете по-больше узнать об основных алгоритических
+        структурах и базовых алгоритмах в языке Pascal.
+      </p>
+    </footer>
+  </body>
+</html>

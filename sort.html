@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Сортировка по возрастанию</title>
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <link rel="stylesheet" href="./style.css" type="text/css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <h1 class="head">Алгоритмические структуры и алгоритмы</h1>
+      <nav>
+        <ul>
+          <li><a href="./index.html" class="a">Главная</a></li>
+          <li><a href="./test.html" class="a">Тест</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1 class="mini">Сортировка элементов массива</h1>
+      <p class="opis">
+        Этот алгоритм заключается проверке условия в цикле- больше ли текущий
+        элемент следующего? Если да, то они обмениваются значениями. Потом
+        проверяется следующий элемент.
+      </p>
+      <pre class="code">
+program sort;
+var
+    arr: array[1..100] of integer;
+    n, i, t, j: integer; 
+begin
+    writeln('Количество элементов: ');
+    readln(n); 
+    writeln('Укажите значения: ');
+    for i := 1 to n do
+        readln(arr[i]);
+    for i := 1 to n do
+        for j := 1 to n-i do
+            if arr[j] > arr[j+1] then
+            begin
+                t := arr[j];
+                arr[j] := arr[j+1];
+                arr[j+1] := t
+            end;
+ end.</pre
+      >
+      <p class="opis">
+        Что бы сделать сортировку по убыванию, достаточно поменять знак в
+        условии: if arr[j] < arr[j+1]
+      </p>
+    </main>
+    <footer class="footer">
+      <p class="foot">
+        На этом сайте вы можете по-больше узнать об основных алгоритических
+        структурах и базовых алгоритмах в языке Pascal.
+      </p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Число на цифры</title>
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <link rel="stylesheet" href="./style.css" type="text/css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <h1 class="head">Алгоритмические структуры и алгоритмы</h1>
+      <nav>
+        <ul>
+          <li><a href="./index.html" class="a">Главная</a></li>
+          <li><a href="./test.html" class="a">Тест</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1 class="mini">Разделение числа на цифры</h1>
+      <h2 class="forma">От младших разрядов к старшим</h2>
+      <p class="opis">
+        Чтобы получить последнюю цифру числа, нужно найти остаток от деления на
+        10. После само число делится нацело на 10, чтобы избавится от младшего
+        разряда.
+      </p>
+      <pre class="code">
+program separate;
+var
+    n, d: integer; 
+begin
+    writeln('Введите число: ');
+    readln(n); 
+    repeat
+        d := n mod 10;
+        n := n div 10;
+        write(d, ' ');
+    until n = 0
+ end.</pre
+      >
+      <h2 class="forma">От старших разрядов к младшим</h2>
+      <p class="opis">
+        В этом алгоритме вначале нам нужно найти число, имющее столько же
+        разрядов, сколько у данного. Обозначим это число буквой p. Чтобы найти
+        первую цифру, надо данное число нацело разделить на p. Затем данному
+        число присваевается остаток от деления данного числа на p, чтобы
+        избавиться от старшего разряда. После мы уменьшаем p в 10 раз.
+      </p>
+      <pre class="code">
+program separate;
+var
+     n, d, p: integer; 
+begin
+    writeln('Введите число: ');
+    readln(n); 
+    p := 1;
+    while p*10 <= n do
+        p := p * 10;
+    repeat
+        d := n div p;
+        n := n mod p;
+        p := p div 10;
+        write(d, ' ');
+     until p = 0
+ end.</pre
+      >
+    </main>
+    <footer class="footer">
+      <p class="foot">
+        На этом сайте вы можете по-больше узнать об основных алгоритических
+        структурах и базовых алгоритмах в языке Pascal.
+      </p>
+    </footer>
+  </body>
+</html>
