@@ -24,40 +24,80 @@
         1.Какой оператор используется для выполнения второго блока действий в
         условном операторе?
       </h3>
-      <div class="gr">
-        <p><input type="radio" name="perv" />another</p>
-        <p><input type="radio" name="perv" class="r" />else</p>
-        <p><input type="radio" name="perv" />different</p>
-        <p><input type="radio" name="perv" />otherwise</p>
+      <div>
+        <button class="b b1">Выбрать</button>
+        <p class="opis" style="display: inline-block;">another</p>
+      </div>
+      <div>
+        <button class="b b1">Выбрать</button>
+        <p class="opis" style="display: inline-block;">different</p>
+      </div>
+      <div>
+        <button class="b b1 r">Выбрать</button>
+        <p class="opis" style="display: inline-block;">else</p>
+      </div>
+      <div>
+        <button class="b b1">Выбрать</button>
+        <p class="opis" style="display: inline-block;">overwise</p>
       </div>
       <h3 class="forma">
         2.Сколько раз обязательно выполнится цикл с пост-условием(repeat until)?
       </h3>
-      <div class="gr">
-        <p><input type="radio" name="vtor" class="r" />1</p>
-        <p><input type="radio" name="vtor" />0</p>
-        <p><input type="radio" name="vtor" />2</p>
-        <p><input type="radio" name="vtor" />3</p>
+      <div>
+        <button class="b b2">Выбрать</button>
+        <p class="opis" style="display: inline-block;">0</p>
+      </div>
+      <div>
+        <button class="b b2 r">Выбрать</button>
+        <p class="opis" style="display: inline-block;">1</p>
+      </div>
+      <div>
+        <button class="b b2">Выбрать</button>
+        <p class="opis" style="display: inline-block;">2</p>
+      </div>
+      <div>
+        <button class="b b2">Выбрать</button>
+        <p class="opis" style="display: inline-block;">3</p>
       </div>
       <h3 class="forma">
         3.Если в условном операторе присутвствует оператор else, то какая это
         форма условного оператора?
       </h3>
-      <div class="gr">
-        <p><input type="radio" name="third" class="r" />Полная</p>
-        <p><input type="radio" name="third" />Большая</p>
-        <p><input type="radio" name="third" />Простая</p>
-        <p><input type="radio" name="third" />Неполная</p>
+      <div>
+        <button class="b b3 r">Выбрать</button>
+        <p class="opis" style="display: inline-block;">Полная</p>
+      </div>
+      <div>
+        <button class="b b3">Выбрать</button>
+        <p class="opis" style="display: inline-block;">Большая</p>
+      </div>
+      <div>
+        <button class="b b3">Выбрать</button>
+        <p class="opis" style="display: inline-block;">Простая</p>
+      </div>
+      <div>
+        <button class="b b3">Выбрать</button>
+        <p class="opis" style="display: inline-block;">Неполная</p>
       </div>
       <h3 class="forma">
         4.Какие операторы используются для цикла с заданным количеством
         повторений?
       </h3>
-      <div class="gr">
-        <p><input type="radio" name="forth" />if then else</p>
-        <p><input type="radio" name="forth" />while do</p>
-        <p><input type="radio" name="forth" />for of do</p>
-        <p><input type="radio" name="forth" class="r" />for to do</p>
+      <div>
+        <button class="b b4">Выбрать</button>
+        <p class="opis" style="display: inline-block;">if then else</p>
+      </div>
+      <div>
+        <button class="b b4">Выбрать</button>
+        <p class="opis" style="display: inline-block;">while do</p>
+      </div>
+      <div>
+        <button class="b b4">Выбрать</button>
+        <p class="opis" style="display: inline-block;">repeat until</p>
+      </div>
+      <div>
+        <button class="b b4 r">Выбрать</button>
+        <p class="opis" style="display: inline-block;">for to do</p>
       </div>
       <button class="btn">Закончить</button>
     </main>
@@ -69,28 +109,51 @@
     </footer>
     <script>
       "use strict";
-      let res = 0;
+      let buttons = [[]];
+      let answers = 0;
       let btn = document.querySelector(".btn");
-      let el = document.createElement("p");
-      let f = document.getElementById("f");
-      let ans = document.getElementsByTagName("input");
-      function count() {
-        btn.remove();
-        for (let a of ans)
-          if (a.checked && a.classList.contains("r")) {
-            ++res;
-            a.parentElement.classList.add("green");
-            a.parentElement.classList.add("answer");
-          } else if (a.checked) {
-            a.parentElement.classList.add("red");
-            a.parentElement.classList.add("answer");
-          }
-        el.innerHTML = "Правильных ответов: " + res;
-        el.classList.add("result");
-        document.body.appendChild(el);
-        document.body.insertBefore(el, f);
+      let footer = document.getElementById("f");
+      for (let i = 0; i < 4; ++i) {
+        buttons[i] = document.querySelectorAll(".b" + (i + 1));
       }
-      btn.addEventListener("click", count);
+      for (let but of buttons) {
+        for (let el of but)
+          el.addEventListener("click", function(e) {
+            for (let i = 0; i < but.length; ++i) {
+              but[i].innerHTML = "Выбрать";
+              but[i].style.background = "white";
+              but[i].style.color = "black";
+            }
+            event.target.innerHTML = "Выбрано";
+            event.target.style.background = "rgba(20, 20, 20, 0.753)";
+            event.target.style.color = "white";
+          });
+      }
+      let element1 = document.createElement("p");
+      let element2 = document.createElement("p");
+      btn.addEventListener("click", function() {
+        for (let but of buttons)
+          for (let el of but)
+            if (
+              el.classList.contains("r") &&
+              el.style.background == "rgba(20, 20, 20, 0.753)"
+            ) {
+              ++answers;
+              el.nextElementSibling.classList.add("green");
+              el.nextElementSibling.classList.add("answer");
+            } else if (el.style.background == "rgba(20, 20, 20, 0.753)") {
+              el.nextElementSibling.classList.add("red");
+              el.nextElementSibling.classList.add("answer");
+            }
+        btn.remove();
+        element1.innerHTML = "Правильных ответов: " + answers;
+        element2.innerHTML =
+          "Тест выполнен правильно на " + (answers / 4) * 100 + "%";
+        element1.classList.add("opis");
+        element2.classList.add("opis");
+        document.body.insertBefore(element1, f);
+        document.body.insertBefore(element2, f);
+      });
     </script>
   </body>
 </html>
