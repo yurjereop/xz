@@ -1,159 +1,162 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Алгоритмы и структуры</title>
-    <link rel="stylesheet" href="bootstrap.min.css" />
-    <link rel="stylesheet" href="./style.css" type="text/css" />
-  </head>
-  <body>
-    <header class="main-header">
-      <h1 class="head">Алгоритмические структуры и алгоритмы</h1>
-      <nav>
-        <ul>
-          <li><a href="./index.html" class="a">Главная</a></li>
-          <li><a href="./test.html" class="a">Тест</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main id="main">
-      <h1 class="mini">Тест</h1>
-      <h3 class="forma">
-        1.Какой оператор используется для выполнения второго блока действий в
-        условном операторе?
-      </h3>
-      <div>
-        <button class="b b1">Выбрать</button>
-        <p class="opis" style="display: inline-block;">another</p>
-      </div>
-      <div>
-        <button class="b b1">Выбрать</button>
-        <p class="opis" style="display: inline-block;">different</p>
-      </div>
-      <div>
-        <button class="b b1 r">Выбрать</button>
-        <p class="opis" style="display: inline-block;">else</p>
-      </div>
-      <div>
-        <button class="b b1">Выбрать</button>
-        <p class="opis" style="display: inline-block;">overwise</p>
-      </div>
-      <h3 class="forma">
-        2.Сколько раз обязательно выполнится цикл с пост-условием(repeat until)?
-      </h3>
-      <div>
-        <button class="b b2">Выбрать</button>
-        <p class="opis" style="display: inline-block;">0</p>
-      </div>
-      <div>
-        <button class="b b2 r">Выбрать</button>
-        <p class="opis" style="display: inline-block;">1</p>
-      </div>
-      <div>
-        <button class="b b2">Выбрать</button>
-        <p class="opis" style="display: inline-block;">2</p>
-      </div>
-      <div>
-        <button class="b b2">Выбрать</button>
-        <p class="opis" style="display: inline-block;">3</p>
-      </div>
-      <h3 class="forma">
-        3.Если в условном операторе присутвствует оператор else, то какая это
-        форма условного оператора?
-      </h3>
-      <div>
-        <button class="b b3 r">Выбрать</button>
-        <p class="opis" style="display: inline-block;">Полная</p>
-      </div>
-      <div>
-        <button class="b b3">Выбрать</button>
-        <p class="opis" style="display: inline-block;">Большая</p>
-      </div>
-      <div>
-        <button class="b b3">Выбрать</button>
-        <p class="opis" style="display: inline-block;">Простая</p>
-      </div>
-      <div>
-        <button class="b b3">Выбрать</button>
-        <p class="opis" style="display: inline-block;">Неполная</p>
-      </div>
-      <h3 class="forma">
-        4.Какие операторы используются для цикла с заданным количеством
-        повторений?
-      </h3>
-      <div>
-        <button class="b b4">Выбрать</button>
-        <p class="opis" style="display: inline-block;">if then else</p>
-      </div>
-      <div>
-        <button class="b b4">Выбрать</button>
-        <p class="opis" style="display: inline-block;">while do</p>
-      </div>
-      <div>
-        <button class="b b4">Выбрать</button>
-        <p class="opis" style="display: inline-block;">repeat until</p>
-      </div>
-      <div>
-        <button class="b b4 r">Выбрать</button>
-        <p class="opis" style="display: inline-block;">for to do</p>
-      </div>
-      <button class="btn">Закончить</button>
-    </main>
-    <footer class="footer" id="f">
-      <p class="foot">
-        На этом сайте вы можете по-больше узнать об основных алгоритических
-        структурах и базовых алгоритмах в языке Pascal.
-      </p>
-    </footer>
-    <script>
-      "use strict";
-      let buttons = [[]];
-      let answers = 0;
-      let btn = document.querySelector(".btn");
-      let footer = document.getElementById("f");
-      for (let i = 0; i < 4; ++i) {
-        buttons[i] = document.querySelectorAll(".b" + (i + 1));
-      }
-      for (let but of buttons) {
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Алгоритмы и структуры</title>
+  <link rel="stylesheet" href="bootstrap.min.css" />
+  <link rel="stylesheet" href="./style.css" type="text/css" />
+</head>
+
+<body>
+  <header class="main-header">
+    <h1 class="head">Алгоритмические структуры и алгоритмы</h1>
+    <nav>
+      <ul>
+        <li><a href="./index.html" class="a">Главная</a></li>
+        <li><a href="./test.html" class="a">Тест</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="main">
+    <h1 class="mini">Тест</h1>
+    <h3 class="forma">
+      1.Какой оператор используется для выполнения второго блока действий в
+      условном операторе?
+    </h3>
+    <div>
+      <button class="b b1">Выбрать</button>
+      <p class="opis" style="display: inline-block;">another</p>
+    </div>
+    <div>
+      <button class="b b1">Выбрать</button>
+      <p class="opis" style="display: inline-block;">different</p>
+    </div>
+    <div>
+      <button class="b b1 r">Выбрать</button>
+      <p class="opis" style="display: inline-block;">else</p>
+    </div>
+    <div>
+      <button class="b b1">Выбрать</button>
+      <p class="opis" style="display: inline-block;">otherwise</p>
+    </div>
+    <h3 class="forma">
+      2.Сколько раз обязательно выполнится цикл с пост-условием(repeat until)?
+    </h3>
+    <div>
+      <button class="b b2">Выбрать</button>
+      <p class="opis" style="display: inline-block;">0</p>
+    </div>
+    <div>
+      <button class="b b2 r">Выбрать</button>
+      <p class="opis" style="display: inline-block;">1</p>
+    </div>
+    <div>
+      <button class="b b2">Выбрать</button>
+      <p class="opis" style="display: inline-block;">2</p>
+    </div>
+    <div>
+      <button class="b b2">Выбрать</button>
+      <p class="opis" style="display: inline-block;">3</p>
+    </div>
+    <h3 class="forma">
+      3.Если в условном операторе присутвствует оператор else, то какая это
+      форма условного оператора?
+    </h3>
+    <div>
+      <button class="b b3 r">Выбрать</button>
+      <p class="opis" style="display: inline-block;">Полная</p>
+    </div>
+    <div>
+      <button class="b b3">Выбрать</button>
+      <p class="opis" style="display: inline-block;">Большая</p>
+    </div>
+    <div>
+      <button class="b b3">Выбрать</button>
+      <p class="opis" style="display: inline-block;">Простая</p>
+    </div>
+    <div>
+      <button class="b b3">Выбрать</button>
+      <p class="opis" style="display: inline-block;">Неполная</p>
+    </div>
+    <h3 class="forma">
+      4.Какие операторы используются для цикла с заданным количеством
+      повторений?
+    </h3>
+    <div>
+      <button class="b b4">Выбрать</button>
+      <p class="opis" style="display: inline-block;">if then else</p>
+    </div>
+    <div>
+      <button class="b b4">Выбрать</button>
+      <p class="opis" style="display: inline-block;">while do</p>
+    </div>
+    <div>
+      <button class="b b4">Выбрать</button>
+      <p class="opis" style="display: inline-block;">repeat until</p>
+    </div>
+    <div>
+      <button class="b b4 r">Выбрать</button>
+      <p class="opis" style="display: inline-block;">for to do</p>
+    </div>
+    <button class="btn">Закончить</button>
+  </main>
+  <footer class="footer" id="f">
+    <p class="foot">
+      На этом сайте вы можете по-больше узнать об основных алгоритических
+      структурах и базовых алгоритмах в языке Pascal.
+    </p>
+  </footer>
+  <script>
+    "use strict";
+    let buttons = [[]];
+    let answers = 0;
+    let btn = document.querySelector(".btn");
+    let footer = document.getElementById("f");
+    for (let i = 0; i < 4; ++i) {
+      buttons[i] = document.querySelectorAll(".b" + (i + 1));
+    }
+    for (let but of buttons) {
+      for (let el of but)
+        el.addEventListener("click", function (e) {
+          for (let i = 0; i < but.length; ++i) {
+            but[i].innerHTML = "Выбрать";
+            but[i].style.background = "white";
+            but[i].style.color = "black";
+          }
+          event.target.innerHTML = "Выбрано";
+          event.target.style.background = "rgba(20, 20, 20, 0.753)";
+          event.target.style.color = "white";
+        });
+    }
+    let element1 = document.createElement("p");
+    let element2 = document.createElement("p");
+    btn.addEventListener("click", function () {
+      for (let but of buttons)
         for (let el of but)
-          el.addEventListener("click", function(e) {
-            for (let i = 0; i < but.length; ++i) {
-              but[i].innerHTML = "Выбрать";
-              but[i].style.background = "white";
-              but[i].style.color = "black";
-            }
-            event.target.innerHTML = "Выбрано";
-            event.target.style.background = "rgba(20, 20, 20, 0.753)";
-            event.target.style.color = "white";
-          });
-      }
-      let element1 = document.createElement("p");
-      let element2 = document.createElement("p");
-      btn.addEventListener("click", function() {
-        for (let but of buttons)
-          for (let el of but)
-            if (
-              el.classList.contains("r") &&
-              el.style.background == "rgba(20, 20, 20, 0.753)"
-            ) {
-              ++answers;
-              el.nextElementSibling.classList.add("green");
-              el.nextElementSibling.classList.add("answer");
-            } else if (el.style.background == "rgba(20, 20, 20, 0.753)") {
-              el.nextElementSibling.classList.add("red");
-              el.nextElementSibling.classList.add("answer");
-            }
-        btn.remove();
-        element1.innerHTML = "Правильных ответов: " + answers;
-        element2.innerHTML =
-          "Тест выполнен правильно на " + (answers / 4) * 100 + "%";
-        element1.classList.add("opis");
-        element2.classList.add("opis");
-        document.body.insertBefore(element1, f);
-        document.body.insertBefore(element2, f);
-      });
-    </script>
-  </body>
+          if (
+            el.classList.contains("r") &&
+            el.style.background == "rgba(20, 20, 20, 0.753)"
+          ) {
+            ++answers;
+            el.nextElementSibling.classList.add("green");
+            el.nextElementSibling.classList.add("answer");
+          } else if (el.style.background == "rgba(20, 20, 20, 0.753)") {
+            el.nextElementSibling.classList.add("red");
+            el.nextElementSibling.classList.add("answer");
+          }
+      btn.remove();
+      element1.innerHTML = "Правильных ответов: " + answers;
+      element2.innerHTML =
+        "Тест выполнен правильно на " + (answers / 4) * 100 + "%";
+      element1.classList.add("opis");
+      element2.classList.add("opis");
+      document.body.insertBefore(element1, f);
+      document.body.insertBefore(element2, f);
+    });
+  </script>
+</body>
+
 </html>
