@@ -18,10 +18,12 @@ li {
 }
 .b {
   border: solid black 1px;
+  cursor: pointer;
   border-radius: 3px;
-  margin-left: 5px;
+  margin: 5px;
   width: 100px;
   background: white;
+  font-size: 1.1rem;
   height: 40px;
 }
 .ili {
@@ -68,16 +70,20 @@ li {
   padding: 5px;
   box-shadow: 1px 0.5px 6px 1px rgba(54, 54, 54, 0.466);
   margin: 5px;
-  font-size: 1rem;
+  font-size: 1.2rem;
+  line-height: 1.7rem;
 }
 pre {
   font-size: 1.1rem;
   margin-bottom: 0px;
 }
 .btn {
-  margin: 20px;
+  margin: 20px 20px 10px 20px;
   font-size: 1.6rem;
   border: 2px black solid;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
 }
 .opis {
   margin-left: 10px;
@@ -220,7 +226,7 @@ main {
   }
   .code {
     width: 500px;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
   .opis {
     font-size: 1.3rem;
@@ -248,7 +254,7 @@ main {
   }
   .code {
     width: 600px;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     margin: 15px;
   }
   .answer {
