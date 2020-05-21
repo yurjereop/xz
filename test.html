@@ -111,7 +111,7 @@
         базовых алгоритмах в языке Pascal.
       </p>
     </footer>
-    <script>
+    <script type="text/javascript">
       "use strict";
       let buttons = [[]];
       let answers = 0;
@@ -125,11 +125,11 @@
           el.addEventListener("click", function (e) {
             for (let i = 0; i < but.length; ++i) {
               but[i].innerHTML = "Выбрать";
-              but[i].style.background = "white";
+              but[i].style.backgroundColor = "white";
               but[i].style.color = "black";
             }
             event.target.innerHTML = "Выбрано";
-            event.target.style.background = "rgba(20, 20, 20, 0.753)";
+            event.target.style.backgroundColor = "rgba(20, 20, 20, 0.753)";
             event.target.style.color = "white";
           });
       }
@@ -140,12 +140,12 @@
           for (let el of but)
             if (
               el.classList.contains("r") &&
-              el.style.background == "rgba(20, 20, 20, 0.753)"
+              el.style.backgroundColor == "rgba(20, 20, 20, 0.753)"
             ) {
               ++answers;
               el.nextElementSibling.classList.add("green");
               el.nextElementSibling.classList.add("answer");
-            } else if (el.style.background == "rgba(20, 20, 20, 0.753)") {
+            } else if (el.style.backgroundColor == "rgba(20, 20, 20, 0.753)") {
               el.nextElementSibling.classList.add("red");
               el.nextElementSibling.classList.add("answer");
             }
